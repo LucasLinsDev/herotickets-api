@@ -20,6 +20,7 @@ const eventSchema = new  mongoose.Schema({
         type:Array,
     },
     city: String,
+     coupons:[String],
     participants:{
         type: Array,
         ref: "User",

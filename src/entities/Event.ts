@@ -1,3 +1,4 @@
+import { Location } from "./Location";
 import { Price } from "./Price";
 import { User } from "./User";
 
@@ -7,10 +8,14 @@ class Event{
         public title:string,
         public location:Location,
         public date:Date,
-        public descrition:string,
+        public description:string,
+        public coupons:string[],
+        public city:string,
         public banner:string,
+        public flyers: string[],
         public participants:User[],
-        public prince:Price[],
+        public price:Price[],
+        
     ){
 
     }

@@ -9,21 +9,22 @@ class App{
     private eventRoutes = new EventRoutes();
     constructor(){
         this.app = express();
+
         this.middlewaresInitialize();
         this.initializeRoutes();
         this.interceptionError();
         connect();
     }
 
-    initializeRoutes(){
+    private  initializeRoutes(){
          this.app.use("/events",this.eventRoutes.router)
     }
 
-    interceptionError(){
+    private  interceptionError(){
         this.app.use(errorMiddleware);
     }
 
-    middlewaresInitialize(){
+    private  middlewaresInitialize(){
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended:true})); 
     }
